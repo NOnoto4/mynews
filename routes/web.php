@@ -37,3 +37,11 @@ Route::controller(ProfileController::class)->prefix("admin")->group(function(){
 Route::controller(NewsController::class)->prefix('admin')->group(function() {
     Route::get('news/create', 'add')->middleware('auth');
 });
+
+Route::controller(ProfileController::class)->prefix('admin')->group(function() {
+    Route::get('profile/create', 'add')->middleware('auth');
+});
+
+Route::controller(ProfileController::class)->prefix('admin')->group(function() {
+    Route::get('profile/edit', 'edit')->middleware('auth');
+});
