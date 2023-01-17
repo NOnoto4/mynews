@@ -15,34 +15,32 @@
                         </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2" for="name">名前</label>
+                        <label class="col-md-2">氏名(name)</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ $news_form->title }}">
+                            <input type="text" class="form-control" name="name" value="{{ $profile_form->name }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="gender">性別</label>
+                        <label class="col-md-2">性別(gender)</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="20">{{ $news_form->body }}</textarea>
+                            <input type="text" class="form-control" name="gender" value="{{ $profile_form->gender }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="hobby">趣味</label>
+                        <label class="col-md-2">趣味(hobby)</label>
                         <div class="col-md-10">
-                            <input type="file" class="form-control-file" name="image">
-                            <div class="form-text text-info">
-                                設定中: {{ $news_form->image_path }}
-                            </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" name="remove" value="true">画像を削除
-                                </label>
-                            </div>
+                            <input type="text" class="form-control" name="hobby" value="{{ $profile_form->hobby }}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2">自己紹介欄(introduction)</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="introduction" value="{{ $profile_form->introduction }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-10">
-                            <input type="hidden" name="id" value="{{ $news_form->id }}">
+                            <input type="hidden" name="id" value="{{ $profile_form->id }}">
                             @csrf
                             <input type="submit" class="btn btn-primary" value="更新">
                         </div>

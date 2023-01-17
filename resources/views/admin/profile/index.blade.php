@@ -38,11 +38,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($posts as $news)
+                            @foreach($posts as $profile)
                                 <tr>
-                                    <th>{{ $news->id }}</th>
-                                    <td>{{ Str::limit($news->title, 100) }}</td>
-                                    <td>{{ Str::limit($news->body, 250) }}</td>
+                                    <th>{{ $profile->id }}</th>
+                                    <td>{{ Str::limit($profile->title, 100) }}</td>
+                                    <td>{{ Str::limit($profile->body, 250) }}</td>
                                     <td>
                                         <div>
                                             <a href="{{ route('admin.profile.edit', ['id' => $profile->id]) }}">編集</a>
